@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FileProcessorConsoleApp", "
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FileUploadApi", "FileUploadApi\FileUploadApi.csproj", "{C98823F6-3DAB-4911-88C6-2CCAC7E398B4}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FileProcessorWorker", "FileProcessorWorker\FileProcessorWorker.csproj", "{ACA3BBD6-F15E-4320-B63F-E795979C7840}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -24,5 +26,9 @@ Global
 		{C98823F6-3DAB-4911-88C6-2CCAC7E398B4}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C98823F6-3DAB-4911-88C6-2CCAC7E398B4}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C98823F6-3DAB-4911-88C6-2CCAC7E398B4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{ACA3BBD6-F15E-4320-B63F-E795979C7840}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ACA3BBD6-F15E-4320-B63F-E795979C7840}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ACA3BBD6-F15E-4320-B63F-E795979C7840}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ACA3BBD6-F15E-4320-B63F-E795979C7840}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
