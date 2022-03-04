@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v6.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v6.0": {
+      "FileProcessorConsoleApp/1.0.0": {
+        "runtime": {
+          "FileProcessorConsoleApp.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "FileProcessorConsoleApp/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}
