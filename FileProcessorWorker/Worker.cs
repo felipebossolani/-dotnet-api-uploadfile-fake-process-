@@ -40,6 +40,7 @@ public class Worker : BackgroundService
         _connection.ConnectionShutdown += RabbitMQ_ConnectionShutdown;
         _channel = _connection.CreateModel();
         _channel.QueueDeclare(queue: _queueName, durable: false, exclusive: false, autoDelete: false, arguments: null);
+        _logger.LogInformation("Conectado ao RabbitMQ!");
     }
 
     protected override Task ExecuteAsync(CancellationToken stoppingToken)
@@ -50,11 +51,11 @@ public class Worker : BackgroundService
         consumer.Received += (ch, ea) =>
         {
             var content = Encoding.UTF8.GetString(ea.Body.Span);
-
-            Console.WriteLine($"Processando mensagem: {content}");
-            System.Threading.Thread.Sleep(1000);
-            Console.WriteLine($"Mensagem: {content} processada");
-
+            var random = new Random();
+            int delayTime = random.Next(3, 10);
+            _logger.LogInformation($"Arquivo recebida. Iniciando o processamento. Tempo estimado é de {delayTime}s");
+            Thread.Sleep(delayTime * 1000);
+            _logger.LogInformation($"Arquivo processado com sucesso ({delayTime})!");
 
             _channel.BasicAck(ea.DeliveryTag, false);
         };
